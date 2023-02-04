@@ -9,7 +9,7 @@ import "./output.css";
 function App() {
 	return (
 		<div className='tracking-wide'>
-			<header id="header">
+			<header id='header'>
 				<Navbar />
 			</header>
 			<main
@@ -48,7 +48,14 @@ function App() {
 					className='container m-auto flex flex-col gap-6 items-center mt-6'
 					id='projects'
 				>
-					<Project />
+					<Project
+						link={"https://wanderer.onrender.com/"}
+						img={"https://i.imgur.com/zhY50vE.png"}
+						title={"Wanderer"}
+						caption={
+							"Node.js, Express.js, MongoDb, React - Backpacker App with travel planning and blog posting."
+						}
+					/>
 					<Project
 						link={"https://tackletalk.onrender.com/"}
 						img={"https://i.imgur.com/fc6cwbQ.png"}

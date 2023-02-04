@@ -8,10 +8,11 @@ module.exports = {
 		extend: {},
 		colors: {
 			grey: "#f5f5f5",
-      black: '#000000',
-      white: '#FFFFFF'
+			black: "#000000",
+			white: "#FFFFFF",
+			darkBlue: "#1d2445",
 		},
-    screens: {
+		screens: {
 			sm: "480px",
 			md: "600px",
 			lg: "976px",

@@ -15,7 +15,6 @@ const Footer = () => {
 					<a href='https://twitter.com/hanyehtun' target="_blank">
 						<i class='fa-brands fa-twitter fa-2xl'></i>
 					</a>
-					
 					<a href='www.linkedin.com/in/hanyehtun30799' target="_blank">
 						<i class='fa-brands fa-linkedin fa-2xl'></i>
 					</a>

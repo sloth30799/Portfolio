@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = ({ link, img, title, caption }) => {
 	return (
-		<div className='card card-side w-2/3 border-black border-2 shadow-xl p-3'>
+		<div className='card card-side w-full border-black border-b-2 py-6 rounded-none'>
 			<figure className="w-1/2">
 				<img
 					src={img}
@@ -10,7 +10,7 @@ const Project = ({ link, img, title, caption }) => {
 				/>
 			</figure>
 			<div className='card-body w-1/2'>
-				<h2 className='card-title'>{title}</h2>
+				<h2 className='card-title text-darkBlue font-bold'>{title}</h2>
 				<p>{caption}</p>
 				<div className='card-actions justify-end'>
 					<a href={link} target="_blank">

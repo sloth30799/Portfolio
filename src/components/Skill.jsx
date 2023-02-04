@@ -11,7 +11,7 @@ const Skills = ({ img, title, caption }) => {
 					/>
 				</figure>
 				<div className='card-body items-center text-center'>
-					<h2 className='card-title'>{title}</h2>
+					<h2 className='card-title text-2xl text-darkBlue font-bold'>{title}</h2>
 					<p>{caption}</p>
 				</div>
 			</div>
