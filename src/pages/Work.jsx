@@ -7,21 +7,21 @@ const Work = () => {
   return (
     <div>
       <Project
-        link={"https://next-mastery-store.vercel.app/"}
-        glink={"https://github.com/sloth30799/Next-Mastery-Store"}
-        img={"https://i.imgur.com/ltP0NwB.jpg"}
-        title={"Next Mastery Store"}
-        caption={
-          "Nextjs, Typescript, Sanity.io, Stripe - An e-commerce app with sanity content management system and stripe payment platform."
-        }
-      />
-      <Project
         link={"https://wanderer.onrender.com/"}
         glink={"https://github.com/sloth30799/Wanderer"}
         img={"https://i.imgur.com/zhY50vE.png"}
         title={"Wanderer"}
         caption={
-          "Node.js, Express.js, MongoDb, React - Backpacker App with travel planning and blog posting."
+          "Explore new places with Wanderer - the ultimate backpacker app that lets you plan your travels, share your experiences, and connect with like-minded travelers from all around the world."
+        }
+      />
+      <Project
+        link={"https://wanderer-store.vercel.app/"}
+        glink={"https://github.com/sloth30799/Wanderer-Store"}
+        img={"https://i.imgur.com/YAZxKV4.jpg"}
+        title={"Wanderer Store"}
+        caption={
+          "Shop for your adventure with Wanderer Store - a fast and secure e-commerce app that offers a wide range of backpacks to enhance your travel experience."
         }
       />
       <Project
@@ -30,16 +30,7 @@ const Work = () => {
         img={"https://i.imgur.com/fc6cwbQ.png"}
         title={"TackleTalk"}
         caption={
-          "Node.js, Express.js, MongoDb, Ejs - Social App for football fans."
-        }
-      />
-      <Project
-        link={"https://dinner-dice.onrender.com/"}
-        glink={"https://github.com/sloth30799/Dinner-Dice"}
-        img={"https://i.imgur.com/0IhyYXp.png?1"}
-        title={"Dinner-Dice"}
-        caption={
-          "Boostrap, React.js, JavaScript - This tool is designed to help you come up with new and exciting recipe ideas by generating random recipes for you to try."
+          "Join the football fandom with TackleTalk - a social app that lets you connect with fellow fans, share your passion, and join communities and met people with similar interests."
         }
       />
       <Project
@@ -47,7 +38,9 @@ const Work = () => {
         glink={""}
         img={"https://i.imgur.com/9Dkp88W.png?1"}
         title={"Akino Restaurant"}
-        caption={"HTML, CSS, JS - Responsive Website for Akino Restaurant."}
+        caption={
+          "Satisfy your taste buds with Akino Restaurant - a beautifully designed website that showcases the best of Japanese cuisine. Come and experience the flavors of Akino today!"
+        }
       />
       <div className="mt-3 flex justify-end mr-3">
         <Link to="/contact">
