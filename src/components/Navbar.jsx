@@ -35,11 +35,7 @@ const Navbar = () => {
         <a href="https://github.com/sloth30799" target="_blank">
           <BsGithub size={"1.5rem"} className={styles.icon} />
         </a>
-        <BsMenuButtonFill
-          size={"1.5rem"}
-          onClick={open}
-          className="lg:hidden block ml-auto"
-        />
+        <BsMenuButtonFill size={"1.5rem"} onClick={open} className="ml-auto" />
       </div>
       <ul className={styles.list}>
         <NavLink
@@ -66,7 +62,7 @@ const Navbar = () => {
             isActive ? styles.active : styles.inactive
           }
         >
-          Services
+          Skills
         </NavLink>
         <li className={styles.divider}></li>
         <NavLink
