@@ -61,7 +61,7 @@ const Footer = () => {
         </a>
         <a
           className="link link-hover"
-          href="www.linkedin.com/in/hanyehtun30799"
+          href="https://linkedin.com/in/hanyehtun30799"
           target="_blank"
         >
           Linkedin

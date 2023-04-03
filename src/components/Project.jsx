@@ -14,12 +14,12 @@ const Project = ({ link, glink, img, title, caption }) => {
         <div className="card-actions justify-end mt-3">
           <a href={glink} target="_blank">
             <button className="btn bg-black text-white gap-2">
-              <BsGithub /> Github
+              <BsGithub /> Code
             </button>
           </a>
           <a href={link} target="_blank">
             <button className="btn bg-black text-white gap-2">
-              <BiLinkExternal /> Site
+              <BiLinkExternal /> Live Demo
             </button>
           </a>
         </div>

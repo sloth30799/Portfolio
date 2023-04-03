@@ -4,22 +4,13 @@ import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 const styles = {
-  slogan: `flex p-3 px-6 justify-center`,
-  logo: `hidden text-xl font-bold lg:inline`,
-  logoSmall: `inline text-xl font-bold lg:hidden`,
-  main: `container m-auto my-12 lg:h-1/2`,
+  main: `container m-auto p-6 my-1 lg:my-6 lg:h-1/2`,
 }
 
 const Layout = () => {
   return (
-    <div>
+    <div className="z-1">
       <Navbar />
-      <div className={styles.slogan}>
-        <h1 className={styles.logo}>
-          Bringing ideas to life, one design at a time.
-        </h1>
-        <h1 className={styles.logoSmall}>Bringing ideas to life.</h1>
-      </div>
       <main className={styles.main}>
         <Outlet />
       </main>

@@ -8,7 +8,6 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
-  SiStripe,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si"
@@ -44,45 +43,6 @@ const About = () => {
           you have a project that aligns with my passions and skills, I would
           love to connect and see how we can work together to make a difference.
         </p>
-        <hr />
-        <div className="my-6 flex flex-col gap-6">
-          <h1 className="font-extrabold text-2xl">Techs I use</h1>
-          <div>
-            <h1 className="text-xl font-bold my-6">- Front-end</h1>
-            <div className="flex gap-6">
-              <h1>
-                <SiNextdotjs size={"2.5rem"} />
-              </h1>
-              <h1>
-                <SiReact size={"2.5rem"} />
-              </h1>
-              <h1>
-                <SiMui size={"2.5rem"} />
-              </h1>
-              <h1>
-                <SiTailwindcss size={"2.5rem"} />
-              </h1>
-            </div>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold my-6">- Back-end</h1>
-            <div className="flex gap-6">
-              <h1>
-                <SiTypescript size={"2.5rem"} />
-              </h1>
-              <h1>
-                <SiMongodb size={"2.5rem"} />
-              </h1>
-              <h1>
-                <SiExpress size={"2.5rem"} />
-              </h1>
-              <h1>
-                <SiNodedotjs size={"2.5rem"} />
-              </h1>
-            </div>
-          </div>
-          <div className="grid grid-rows-4 grid-flow-col lg:grid-flow-row lg:grid-cols-4 gap-3"></div>
-        </div>
         <Link to="/skill" className="flex justify-end mt-6">
           <button className="btn gap-2">
             Skills To offer

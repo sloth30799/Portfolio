@@ -57,7 +57,7 @@ const Contact = () => {
       </div>
       <hr />
       <div className={styles.container}>
-        <h1 className={styles.title}>SAY HELLO!</h1>
+        <h1 className={styles.title}>Don't be shy! Hit me up!</h1>
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col gap-3 mb-3">
             <h1 className="text-xl font-bold">
