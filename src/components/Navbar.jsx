@@ -66,12 +66,12 @@ const Navbar = () => {
             isActive ? styles.active : styles.inactive
           }
         >
-          Skills
+          Services
         </NavLink>
         <li className={styles.divider}></li>
         <NavLink
           to="work"
-          className={({ isActive, isPending }) =>
+          className={({ isActive }) =>
             isActive ? styles.active : styles.inactive
           }
         >
@@ -88,7 +88,7 @@ const Navbar = () => {
         </NavLink>
       </ul>
       {isOpen && (
-        <ul className="absolute left-0 top-0 z-2 m-auto w-full h-full bg-base-100 flex flex-col gap-3 justify-center items-center">
+        <ul className="absolute left-0 top-0 z-10 m-auto w-full h-full bg-base-100 flex flex-col gap-3 justify-center items-center">
           <li>
             <AiOutlineCloseCircle onClick={close} />
           </li>
@@ -121,7 +121,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="work"
-            className={({ isActive, isPending }) =>
+            className={({ isActive }) =>
               isActive ? styles.active : styles.inactive
             }
             onClick={close}

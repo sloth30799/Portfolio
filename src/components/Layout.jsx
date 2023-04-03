@@ -4,7 +4,7 @@ import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 const styles = {
-  main: `container m-auto p-6 my-1 lg:my-6 lg:h-1/2`,
+  main: `container m-auto p-3 lg:p-6 my-1 lg:my-6 lg:h-1/2`,
 }
 
 const Layout = () => {

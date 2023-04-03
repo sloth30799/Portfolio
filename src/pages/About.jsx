@@ -1,16 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { BiArrowFromLeft } from "react-icons/bi"
-import {
-  SiExpress,
-  SiMongodb,
-  SiMui,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si"
 
 const styles = {
   container: `flex flex-col gap-12 p-3 lg:p-0 lg:flex-row`,
@@ -28,6 +18,7 @@ const About = () => {
         />
       </figure>
       <div className={styles.textBox}>
+        <h1 className="underline text-lg my-1 font-semibold">About</h1>
         <h2 className="text-3xl font-bold">Han Ye Htun</h2>
         <span className="text-accent font-lg font-semibold">
           Software Engineer
@@ -45,7 +36,7 @@ const About = () => {
         </p>
         <Link to="/skill" className="flex justify-end mt-6">
           <button className="btn gap-2">
-            Skills To offer
+            Services To offer
             <BiArrowFromLeft size={"1.5rem"} />
           </button>
         </Link>

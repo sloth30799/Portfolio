@@ -12,7 +12,7 @@ const skillsData = [
   },
   {
     img: "/img/urban-line-scientists-studying-atom-by-the-computer.png",
-    title: "Full stack Web Apps",
+    title: "Full stack Web Applications",
     caption:
       "Bring your ideas to life with the help of a skilled developer! I bring a collaborative approach to software development and work closely with clients and team members to turn their ideas into tangible, functional software. Let's work together to bring your software vision to life and make an impact!",
   },

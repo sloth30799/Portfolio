@@ -43,10 +43,12 @@ const Home = () => {
           </p>
           <div className="flex flex-col gap-3 items-end place-self-end mt-6 lg:flex-row">
             <Link to="contact">
-              <button className="btn rounded">Let's chat!</button>
+              <button className="btn bg-black text-white rounded">
+                Let's chat!
+              </button>
             </Link>
             <Link to="about">
-              <button className="btn bg-black text-white rounded gap-2">
+              <button className="btn rounded">
                 More About me
                 <BiArrowFromLeft size={"1.5rem"} />
               </button>
