@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const styles = {
   container: `flex flex-col gap-12 p-3 lg:p-0 lg:flex-row`,
-  image: `w-full lg:w-1/2`,
+  image: `w-full lg:w-1/2 hover:drop-shadow-3xl`,
   textBox: `w-full p-3 lg:w-1/2 lg:p-0`,
 }
 
@@ -39,7 +39,7 @@ const About = () => {
         />
       </figure>
       <div className={styles.textBox}>
-        <h1 className="underline text-lg my-1 font-semibold">About</h1>
+        <h1 className="badge badge-ghost p-3">About</h1>
         <h2 className="text-3xl font-bold">Han Ye Htun</h2>
         <span className="text-accent font-lg font-semibold">
           Software Engineer

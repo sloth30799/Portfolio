@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { BsLinkedin, BsGithub, BsMenuButtonFill } from "react-icons/bs"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 
@@ -28,7 +28,9 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoBox}>
-        <h2 className={styles.logo}>Han Ye Htun</h2>
+        <Link to="/">
+          <h2 className={styles.logo}>Han Ye Htun</h2>
+        </Link>
         <a href="https://linkedin.com/in/hanyehtun30799" target="_blank">
           <BsLinkedin size={"1.5rem"} className={styles.icon} />
         </a>

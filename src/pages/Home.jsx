@@ -14,7 +14,7 @@ import {
 
 const styles = {
   box: `flex flex-col gap-6 p-3 lg:p-0 lg:flex-row lg:my-6`,
-  image: `w-full lg:w-1/2`,
+  image: `w-full lg:w-1/2 hover:drop-shadow-3xl`,
   icon: `rounded-lg hover:scale-110 active:scale-90`,
   textBox: `w-full lg:w-1/2 flex flex-col gap-3 justify-center text-center`,
   techText: `font-bold text-xl text-center border-0 border-b-2 pb-3 lg:pb-0 lg:border-0 lg:border-r-2 lg:pr-3`,

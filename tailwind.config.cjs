@@ -5,7 +5,11 @@ module.exports = {
     themes: ["wireframe"],
   },
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        "3xl": "10px 10px 0 rgba(0,0,0,0.72)",
+      },
+    },
     colors: {
       grey: "#f5f5f5",
       black: "#000000",
