@@ -14,8 +14,6 @@ import Layout from "./components/Layout"
 import Skill from "./pages/Skill"
 
 function App() {
-  const location = useLocation()
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
