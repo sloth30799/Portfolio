@@ -3,6 +3,7 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  useLocation,
 } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import Home from "./pages/Home"
@@ -12,19 +13,21 @@ import Contact from "./pages/Contact"
 import Layout from "./components/Layout"
 import Skill from "./pages/Skill"
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="skill" element={<Skill />} />
-      <Route path="work" element={<Work />} />
-      <Route path="contact" element={<Contact />} />
-    </Route>
-  )
-)
-
 function App() {
+  const location = useLocation()
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="skill" element={<Skill />} />
+        <Route path="work" element={<Work />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    )
+  )
+
   return (
     <>
       <AnimatePresence mode="wait" initial={false}>

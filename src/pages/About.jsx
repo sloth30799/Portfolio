@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { BiArrowFromLeft } from "react-icons/bi"
+import { motion } from "framer-motion"
 
 const styles = {
   container: `flex flex-col gap-12 p-3 lg:p-0 lg:flex-row`,
@@ -8,9 +9,29 @@ const styles = {
   textBox: `w-full p-3 lg:w-1/2 lg:p-0`,
 }
 
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { delay: 1.5, duration: 5 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+}
+
 const About = () => {
   return (
-    <div className={styles.container}>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className={styles.container}
+    >
       <figure className={styles.image}>
         <img
           src="/img/hero.jpg"
@@ -41,7 +62,7 @@ const About = () => {
           </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
