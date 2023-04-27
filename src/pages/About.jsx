@@ -4,8 +4,8 @@ import { BiArrowFromLeft } from "react-icons/bi"
 import { motion } from "framer-motion"
 
 const styles = {
-  container: `flex flex-col gap-12 p-3 lg:p-0 lg:flex-row`,
-  image: `w-full lg:w-1/2 hover:drop-shadow-3xl`,
+  container: `container m-auto flex flex-col gap-12 lg:flex-row bg-white p-3 lg:py-6 lg:px-12 my-6 border-solid border-black border-2 shadow-black`,
+  image: `w-full lg:w-1/2 grayscale hover:grayscale-0`,
   textBox: `w-full p-3 lg:w-1/2 lg:p-0`,
 }
 
@@ -25,44 +25,47 @@ const containerVariants = {
 
 const About = () => {
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      className={styles.container}
-    >
-      <figure className={styles.image}>
+    <div className="p-3">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={styles.container}
+      >
         <img
-          src="/img/hero.jpg"
+          src="/img/about.jpg"
           alt="Illustration by Semenin Egor from Ouch!"
+          className={styles.image}
         />
-      </figure>
-      <div className={styles.textBox}>
-        <h1 className="badge badge-ghost p-3">About</h1>
-        <h2 className="text-3xl font-bold">Han Ye Htun</h2>
-        <span className="text-accent font-lg font-semibold">
-          Software Engineer
-        </span>
-        <p className="text-lg mb-3">
-          Hi there! My name is Han Ye Htun, and I am a driven and passionate
-          software engineer, always on the lookout for new challenges and
-          opportunities to learn and grow in my field. With my background in
-          medicine, I have strong foundation in problem-solving and critical
-          thinking skills. <br />
-          <br />I am committed to using my skills and knowledge to create
-          innovative solutions that make a positive impact on people's lives. If
-          you have a project that aligns with my passions and skills, I would
-          love to connect and see how we can work together to make a difference.
-        </p>
-        <Link to="/skill" className="flex justify-end mt-6">
-          <button className="btn gap-2">
-            Services To offer
-            <BiArrowFromLeft size={"1.5rem"} />
-          </button>
-        </Link>
-      </div>
-    </motion.div>
+
+        <div className={styles.textBox}>
+          <h1 className="font-title">//About</h1>
+          <h2 className="text-3xl font-title">Han Ye Htun</h2>
+          <span className="text-accent text-xs font-title tracking-wide">
+            Software Engineer
+          </span>
+          <p className="mb-3">
+            Hi there! My name is Han Ye Htun, and I am a driven and passionate
+            software engineer, always on the lookout for new challenges and
+            opportunities to learn and grow in my field. With my background in
+            medicine, I have strong foundation in problem-solving and critical
+            thinking skills. <br />
+            <br />I am committed to using my skills and knowledge to create
+            innovative solutions that make a positive impact on people's lives.
+            If you have a project that aligns with my passions and skills, I
+            would love to connect and see how we can work together to make a
+            difference.
+          </p>
+          <Link to="/contact" className="flex justify-end mt-6">
+            <button className="btn gap-2 btn-primary">
+              Contact
+              <BiArrowFromLeft size={"1.3rem"} />
+            </button>
+          </Link>
+        </div>
+      </motion.div>
+    </div>
   )
 }
 

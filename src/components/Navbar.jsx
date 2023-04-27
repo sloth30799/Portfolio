@@ -4,13 +4,13 @@ import { BsLinkedin, BsGithub, BsMenuButtonFill } from "react-icons/bs"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 
 const styles = {
-  navbar: `container m-auto p-6 py-3 flex justify-between`,
+  navbar: `p-6 py-3 flex justify-between`,
   logoBox: `w-full flex gap-3 items-center p-3 lg:p-0`,
-  logo: `lg:text-xl font-extrabold tracking-tight`,
-  icon: `hover:text-white hover:bg-black`,
+  logo: `lg:text-xl font-extrabold tracking-tight underline`,
+  icon: `hover:text-white hover:bg-darkBlue hover:shadow-btn`,
   list: `hidden lg:flex m-1 px-1 gap-3 border-b lg:gap-6`,
-  active: `text-lg font-bold bg-black text-white px-2 rounded`,
-  inactive: `text-lg px-2 hover:bg-accent rounded hover:text-white active:bg-grey`,
+  active: `text-lg font-title bg-black text-white px-2 rounded text-sm`,
+  inactive: `text-lg px-2 font-title hover:bg-accent rounded hover:text-white active:bg-grey text-sm`,
   divider: `hidden border-r h-3 place-self-end lg:block`,
 }
 
@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logoBox}>
         <Link to="/">
-          <h2 className={styles.logo}>Han Ye Htun</h2>
+          <h2 className={styles.logo}>HanYeHtun</h2>
         </Link>
         <a href="https://linkedin.com/in/hanyehtun30799" target="_blank">
           <BsLinkedin size={"1.5rem"} className={styles.icon} />
@@ -63,24 +63,6 @@ const Navbar = () => {
         </NavLink>
         <li className={styles.divider}></li>
         <NavLink
-          to="skill"
-          className={({ isActive }) =>
-            isActive ? styles.active : styles.inactive
-          }
-        >
-          Skills
-        </NavLink>
-        <li className={styles.divider}></li>
-        <NavLink
-          to="work"
-          className={({ isActive }) =>
-            isActive ? styles.active : styles.inactive
-          }
-        >
-          Work
-        </NavLink>
-        <li className={styles.divider}></li>
-        <NavLink
           to="contact"
           className={({ isActive }) =>
             isActive ? styles.active : styles.inactive
@@ -111,24 +93,6 @@ const Navbar = () => {
             onClick={close}
           >
             About
-          </NavLink>
-          <NavLink
-            to="skill"
-            className={({ isActive }) =>
-              isActive ? styles.active : styles.inactive
-            }
-            onClick={close}
-          >
-            Skills
-          </NavLink>
-          <NavLink
-            to="work"
-            className={({ isActive }) =>
-              isActive ? styles.active : styles.inactive
-            }
-            onClick={close}
-          >
-            Work
           </NavLink>
           <NavLink
             to="contact"

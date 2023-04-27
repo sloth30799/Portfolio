@@ -1,25 +1,37 @@
 import React from "react"
 import { BsGithub } from "react-icons/bs"
 import { BiLinkExternal } from "react-icons/bi"
+import { motion } from "framer-motion"
 
-const Project = ({ link, glink, img, title, caption }) => {
+const Project = ({ link, glink, className, title, caption, badge }) => {
   return (
-    <div className="card card-side w-full p-6 rounded-none border-solid border-0 border-b flex flex-col lg:flex-row gap-3">
-      <figure className="w-full lg:w-1/2 hover:drop-shadow-3xl">
-        <img src={img} alt="Website images" />
-      </figure>
-      <div className="card-body w-full lg:w-1/2">
-        <h2 className="card-title text-darkBlue">{title}</h2>
-        <p>{caption}</p>
-        <div className="card-actions justify-end mt-3">
-          <a href={glink} target="_blank">
-            <button className="btn bg-black text-white gap-2">
-              <BsGithub /> Code
-            </button>
-          </a>
-          <a href={link} target="_blank">
-            <button className="btn bg-black text-white gap-2">
-              <BiLinkExternal /> Live Demo
+    <div className="border-solid border-0 border-b pt-5 pb-12 grid grid-rows-5 lg:grid-rows-1 lg:grid-cols-5 gap-6 ">
+      <motion.div
+        className={`workImg ${className} md:col-span-2 row-span-2 md:row-span-3 lg:h-48`}
+        whileHover={{
+          backgroundPositionY: "100%",
+          transition: { duration: 3 },
+        }}
+      ></motion.div>
+      <div>
+        <h1 className="font-title text-lg mb-1">{title}</h1>
+        <div className="badge badge-secondary">{badge}</div>
+      </div>
+      <div className="flex flex-col row-span-2 md:row-span-1 md:col-span-2 gap-4 text-sm font-semibold text-grey">
+        {caption}
+        <div className="flex gap-3">
+          {glink ? (
+            <a href={glink}>
+              <button className="btn gap-2 btn-sm btn-outline btn-secondary hover:shadow-btn">
+                <BsGithub />
+                Code
+              </button>
+            </a>
+          ) : null}
+          <a href={link}>
+            <button className="btn gap-2 btn-sm btn-outline btn-secondary hover:shadow-btn">
+              <BiLinkExternal />
+              Live
             </button>
           </a>
         </div>

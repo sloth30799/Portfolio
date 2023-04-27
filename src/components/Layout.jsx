@@ -3,19 +3,19 @@ import { Outlet } from "react-router-dom"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
-const styles = {
-  main: `container m-auto p-3 lg:p-6 my-1 lg:my-6 lg:h-1/2`,
-}
+// const styles = {
+//   main: `p-3 lg:p-6 my-1 lg:my-6 lg:h-1/2`,
+// }
 
 const Layout = () => {
   return (
-    <div className="z-1">
-      <Navbar />
-      <main className={styles.main}>
+    <>
+      <div className="dotted-bg">
+        <Navbar />
         <Outlet />
-      </main>
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
