@@ -6,10 +6,10 @@ module.exports = {
       title: "Sigmar",
     },
     backgroundImage: {
-      wanderer: "url('img/wanderer.jpeg')",
-      "wanderer-store": "url('img/wanderer-store.jpeg')",
-      tackletalk: "url('img/tackletalk.jpeg')",
-      akino: "url('img/akino.jpeg')",
+      wanderer: "url('../public/img/wanderer.jpeg')",
+      "wanderer-store": "url('../public/img/wanderer-store.jpeg')",
+      tackletalk: "url('../public/img/tackletalk.jpeg')",
+      akino: "url('../public/img/akino.jpeg')",
     },
     backgroundSize: {
       "40px": "40px 40px",
