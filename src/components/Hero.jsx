@@ -37,8 +37,8 @@ const Hero = () => {
           I'm Han Ye Htun. A software Engineer
         </h1>
         <div className="bg-black text-white text-xl font-title flex flex-col px-3 py-6 shadow-blue">
-          Serving full-fat, deep fried, amazing Ideas with great Technical
-          Skills
+          Serving full-fat, extra sugar, deep-fried, amazing Ideas with great
+          Technical Skills
           <div className="flex flex-row flex-wrap md:flex-nowrap gap-3 my-6 lg:mt-12">
             <SiTypescript size={"2.5rem"} className={styles.icon} />
             <SiNextdotjs size={"2.5rem"} className={styles.icon} />
