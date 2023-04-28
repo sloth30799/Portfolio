@@ -59,10 +59,12 @@ const Contact = () => {
           <h1 className={styles.title}>Don't be shy! Hit me up!</h1>
           <div className="w-full lg:w-1/2">
             <div className="flex flex-col gap-3 mb-3">
-              <h1 className="text-xl font-bold">
+              <h1 className="text-lg font-bold">
                 Interesting projects? Want to Say Hello?
               </h1>
-              <p className="text-ghost">Typically reply in 1 or 2 days</p>
+              <p className="text-accent text-sm">
+                Typically reply in 1 or 2 days
+              </p>
             </div>
             <div className="form-control w-full max-w-lg py-6">
               <form ref={form} onSubmit={sendEmail}>

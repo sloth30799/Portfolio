@@ -20,12 +20,6 @@ const Footer = () => {
           <span className="font-title">Han Ye Htun</span>
           <br />
           <span className="text-xs">Copyright © 2023 - All right reserved</span>
-
-          <br />
-          <span className="text-xs">
-            Illustrations from{" "}
-            <a href="https://icons8.com/illustrations">Ouch!</a>
-          </span>
         </p>
       </div>
       <div>

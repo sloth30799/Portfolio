@@ -42,10 +42,10 @@ const About = () => {
         <div className={styles.textBox}>
           <h1 className="font-title">//About</h1>
           <h2 className="text-3xl font-title">Han Ye Htun</h2>
-          <span className="text-accent text-xs font-title tracking-wide">
+          <span className="text-accent text-xs tracking-wide block mb-6">
             Software Engineer
           </span>
-          <p className="mb-3">
+          <p className="mb-3 text-sm font-bold">
             Hi there! My name is Han Ye Htun, and I am a driven and passionate
             software engineer, always on the lookout for new challenges and
             opportunities to learn and grow in my field. With my background in

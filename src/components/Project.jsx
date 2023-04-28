@@ -10,7 +10,7 @@ const Project = ({ link, glink, img, title, caption, badge }) => {
         className={`workImg md:col-span-2 row-span-2 md:row-span-3 lg:h-48`}
         whileHover={{
           backgroundPositionY: "100%",
-          transition: { duration: 3 },
+          transition: { duration: 5 },
         }}
         style={{ backgroundImage: `url(${img})` }}
       ></motion.div>
