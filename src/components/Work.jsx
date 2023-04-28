@@ -1,13 +1,15 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import Project from "../components/Project"
-import { BiArrowFromLeft } from "react-icons/bi"
+import wandererBg from "../assets/wanderer.jpeg"
+import wandererStoreBg from "../assets/wanderer-store.jpeg"
+import tackletalkBg from "../assets/tackletalk.jpeg"
+import akinoBg from "../assets/akino.jpeg"
 
 const projects = [
   {
     link: "https://wanderer.onrender.com/",
     glink: "https://github.com/sloth30799/Wanderer",
-    className: " bg-wanderer hover:shadow-3xl",
+    img: wandererBg,
     title: "Wanderer",
     caption:
       "Explore new places with Wanderer - the ultimate backpacker app that lets you plan your travels, share your experiences, and connect with like-minded travelers from all around the world.",
@@ -16,7 +18,7 @@ const projects = [
   {
     link: "https://wanderer-store.vercel.app/",
     glink: "https://github.com/sloth30799/Wanderer-Store",
-    className: "bg-wanderer-store",
+    img: wandererStoreBg,
     title: "Wanderer Store",
     caption:
       "Shop for your adventure with Wanderer Store - a fast and secure e-commerce app that offers a wide range of backpacks ,to enhance your travel experience.",
@@ -25,7 +27,7 @@ const projects = [
   {
     link: "https://tackletalk.onrender.com/",
     glink: "https://github.com/sloth30799/TackleTalk",
-    className: "bg-tackletalk",
+    img: tackletalkBg,
     title: "TackleTalk",
     caption:
       "Join the football fandom with TackleTalk - a social app that lets you connect with fellow fans, share your passion and join communities and met people with similar interests.",
@@ -34,7 +36,7 @@ const projects = [
   {
     link: "https://akino.netlify.app/",
     glink: "",
-    className: "bg-akino",
+    img: akinoBg,
     title: "Akino Restaurant",
     caption:
       "Satisfy your taste buds with Akino Restaurant - a beautifully designed website that showcases the best of Japanese cuisine. Come and experience the flavors of Akino today!",
@@ -51,7 +53,7 @@ const Work = () => {
           <Project
             badge={project.badge}
             caption={project.caption}
-            className={project.className}
+            img={project.img}
             glink={project.glink}
             link={project.link}
             title={project.title}

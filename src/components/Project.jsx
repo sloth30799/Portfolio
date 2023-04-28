@@ -3,15 +3,16 @@ import { BsGithub } from "react-icons/bs"
 import { BiLinkExternal } from "react-icons/bi"
 import { motion } from "framer-motion"
 
-const Project = ({ link, glink, className, title, caption, badge }) => {
+const Project = ({ link, glink, img, title, caption, badge }) => {
   return (
     <div className="border-solid border-0 border-b pt-5 pb-12 grid grid-rows-5 lg:grid-rows-1 lg:grid-cols-5 gap-6 ">
       <motion.div
-        className={`workImg ${className} md:col-span-2 row-span-2 md:row-span-3 lg:h-48`}
+        className={`workImg md:col-span-2 row-span-2 md:row-span-3 lg:h-48`}
         whileHover={{
           backgroundPositionY: "100%",
           transition: { duration: 3 },
         }}
+        style={{ backgroundImage: `url(${img})` }}
       ></motion.div>
       <div>
         <h1 className="font-title text-lg mb-1">{title}</h1>
