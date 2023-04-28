@@ -8,11 +8,12 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
+  SiRedux,
 } from "react-icons/si"
 import SkillDetails from "./SkillDetails"
 
 const styles = {
-  icon: `rounded-lg hover:scale-150 active:scale-90 ease-in-out`,
+  icon: `rounded-lg hover:scale-150 hover:bg-white hover:text-black p-1 ease-in-out`,
 }
 
 const skillsData = [
@@ -39,13 +40,14 @@ const Hero = () => {
         <div className="bg-black text-white text-xl font-title flex flex-col px-3 py-6 shadow-blue">
           Serving full-fat, extra sugar, deep-fried, amazing Ideas with great
           Technical Skills
-          <div className="flex flex-row flex-wrap md:flex-nowrap gap-3 my-6 lg:mt-12">
+          <div className="flex flex-row justify-center flex-wrap md:flex-nowrap gap-3 my-6 lg:mt-12">
             <SiTypescript size={"2.5rem"} className={styles.icon} />
             <SiNextdotjs size={"2.5rem"} className={styles.icon} />
             <SiReact size={"2.5rem"} className={styles.icon} />
-            <SiMongodb size={"2.5rem"} className={styles.icon} />
+            <SiRedux size={"2.5rem"} className={styles.icon} />
             <SiExpress size={"2.5rem"} className={styles.icon} />
             <SiNodedotjs size={"2.5rem"} className={styles.icon} />
+            <SiMongodb size={"2.5rem"} className={styles.icon} />
             <SiMui size={"2.5rem"} className={styles.icon} />
             <SiTailwindcss size={"2.5rem"} className={styles.icon} />
           </div>

@@ -3,7 +3,7 @@ import cardBg from "../assets/code-card.svg"
 
 const Service = ({ img, title, caption }) => {
   return (
-    <motion.div className="relative">
+    <div className="relative">
       <img src={cardBg} alt="" className="z-0 shadow-card" />
       <div className="absolute left-[280px] top-[80px] transform rotate-90 -translate-y-full font-title text-3xl">
         {"<>"}
@@ -18,7 +18,7 @@ const Service = ({ img, title, caption }) => {
         alt=""
         className="z-10 h-[380px] w-[260px] absolute inset-x-2 -bottom-7 rounded-lg grayscale hover:grayscale-0"
       />
-    </motion.div>
+    </div>
   )
 }
 
