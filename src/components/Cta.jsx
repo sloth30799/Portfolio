@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Cta = () => {
   return (
@@ -10,7 +11,9 @@ const Cta = () => {
             <h1 className="font-extrabold text-4xl text-grey">
               Want to work with me? Hit me up.
             </h1>
-            <button className="btn btn-secondary">Contact</button>
+            <Link to="contact">
+              <button className="btn btn-secondary">Contact</button>
+            </Link>
           </div>
         </div>
       </div>
