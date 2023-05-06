@@ -3,7 +3,7 @@ import { BsGithub } from "react-icons/bs"
 import { BiLinkExternal } from "react-icons/bi"
 import { motion } from "framer-motion"
 
-const Project = ({ link, glink, img, title, caption, badge }) => {
+const WorkDetail = ({ link, glink, img, title, caption, badge }) => {
   return (
     <div className="border-solid border-0 border-b pt-5 pb-12 grid grid-rows-5 lg:grid-rows-1 lg:grid-cols-5 gap-6 ">
       <motion.div
@@ -41,4 +41,4 @@ const Project = ({ link, glink, img, title, caption, badge }) => {
   )
 }
 
-export default Project
+export default WorkDetail

@@ -1,13 +1,13 @@
 import React from "react"
-import Project from "../components/Project"
-import wandererBg from "../assets/wanderer.jpeg"
-import wandererStoreBg from "../assets/wanderer-store.jpeg"
-import tackletalkBg from "../assets/tackletalk.jpeg"
-import akinoBg from "../assets/akino.jpeg"
+import WorkDetail from "./WorkDetail"
+import wandererBg from "../../assets/wanderer.jpeg"
+import wandererStoreBg from "../../assets/wanderer-store.jpeg"
+import tackletalkBg from "../../assets/tackletalk.jpeg"
+import akinoBg from "../../assets/akino.jpeg"
 
 const projects = [
   {
-    link: "https://wanderer.onrender.com/",
+    link: "https://wanderer-backpack.vercel.app/",
     glink: "https://github.com/sloth30799/Wanderer",
     img: wandererBg,
     title: "Wanderer",
@@ -44,13 +44,13 @@ const projects = [
   },
 ]
 
-const Work = () => {
+const Works = () => {
   return (
     <div className="bg-white py-6 px-3">
       <div className="container m-auto">
         <h1 className="font-title text-3xl"> // Some Work</h1>
         {projects.map((project) => (
-          <Project
+          <WorkDetail
             badge={project.badge}
             caption={project.caption}
             img={project.img}
@@ -65,4 +65,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Works

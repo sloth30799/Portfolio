@@ -6,7 +6,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai"
 const styles = {
   navbar: `p-6 py-3 flex justify-between`,
   logoBox: `w-full flex gap-3 items-center p-3 lg:p-0`,
-  logo: `lg:text-xl font-extrabold tracking-tight underline`,
+  logo: `font-extrabold tracking-tight underline text-lg md:text-xl`,
   icon: `hover:text-white hover:bg-darkBlue hover:shadow-btn`,
   list: `hidden lg:flex m-1 px-1 gap-3 border-b lg:gap-6`,
   active: `text-lg font-title bg-black text-white px-2 rounded text-sm`,
@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logoBox}>
         <Link to="/">
-          <h2 className={styles.logo}>HanYeHtun</h2>
+          <h2 className={styles.logo}>#HanYeHtun</h2>
         </Link>
         <a href="https://linkedin.com/in/hanyehtun30799" target="_blank">
           <BsLinkedin size={"1.5rem"} className={styles.icon} />
