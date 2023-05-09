@@ -7,7 +7,7 @@ import akinoBg from "../../assets/akino.jpeg"
 
 const projects = [
   {
-    link: "https://wanderer-backpack.vercel.app/",
+    link: "https://wanderer.onrender.com/",
     glink: "https://github.com/sloth30799/Wanderer",
     img: wandererBg,
     title: "Wanderer",
