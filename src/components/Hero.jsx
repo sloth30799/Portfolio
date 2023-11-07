@@ -2,9 +2,9 @@ import React from "react"
 import {
   SiExpress,
   SiMongodb,
-  SiMui,
+  SiDotnet,
   SiNextdotjs,
-  SiNodedotjs,
+  SiVuedotjs,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -18,56 +18,55 @@ const styles = {
 
 const skillsData = [
   {
-    img: "/img/p1.png",
-    title: "Full Stack Development",
-    caption:
-      "Innovative and custom-built applications tailored to your specific needs.",
+    img: "/img/p1.jpeg",
+    title: "Frontend Development",
+    caption: "Craft user interfaces and experiences that engage your audience.",
   },
   {
-    img: "/img/p2.jpg",
-    title: "UI / UX",
-    caption: "Elevate your brand's digital presence with expert UI/UX design.",
+    img: "/img/p2.jpeg",
+    title: "Backend Development",
+    caption: "Build robust server-side solutions to power your applications.",
   },
 ]
 
 const Hero = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-12 p-3 items-center lg:items-start">
-      <div className="lg:w-2/3 mt-6 flex flex-col gap-12">
-        <h1 className="font-title text-4xl pl-3">
+    <section className="flex flex-col items-center justify-between px-3 m-auto xl:container lg:flex-row lg:items-start">
+      <div className="flex flex-col gap-6 pr-3 mb-3 lg:w-2/3">
+        <h1 className="pl-3 text-4xl font-title">
           I'm Han Ye Htun. A software Engineer
         </h1>
-        <div className="bg-black text-white text-xl font-title flex flex-col px-3 py-6 shadow-blue">
+        <div className="flex flex-col px-3 py-6 text-xl text-white bg-black font-title shadow-blue">
           Serving full-fat, extra sugar, deep-fried, amazing Ideas with great
           Technical Skills
-          <div className="flex flex-row justify-center flex-wrap md:flex-nowrap gap-3 my-6 lg:mt-12">
-            <SiTypescript size={"2.5rem"} className={styles.icon} />
-            <SiNextdotjs size={"2.5rem"} className={styles.icon} />
+          <div className="flex flex-row flex-wrap justify-center gap-3 my-6 md:flex-nowrap lg:mt-12">
             <SiReact size={"2.5rem"} className={styles.icon} />
+            <SiNextdotjs size={"2.5rem"} className={styles.icon} />
+            <SiVuedotjs size={"2.5rem"} className={styles.icon} />
+            <SiTailwindcss size={"2.5rem"} className={styles.icon} />
             <SiRedux size={"2.5rem"} className={styles.icon} />
             <SiExpress size={"2.5rem"} className={styles.icon} />
-            <SiNodedotjs size={"2.5rem"} className={styles.icon} />
+            <SiDotnet size={"2.5rem"} className={styles.icon} />
             <SiMongodb size={"2.5rem"} className={styles.icon} />
-            <SiMui size={"2.5rem"} className={styles.icon} />
-            <SiTailwindcss size={"2.5rem"} className={styles.icon} />
+            <SiTypescript size={"2.5rem"} className={styles.icon} />
           </div>
         </div>
-        <div className="bg-white border-2 shadow-black px-3 py-6">
-          <span className="font-title text-xs">// The Dev</span>
-          <h1 className="font-title text-xl mb-6">
+        <div className="px-3 py-6 bg-white border-2 shadow-black">
+          <span className="text-xs font-title">// The Dev</span>
+          <h1 className="mb-6 text-xl font-title">
             Software Engineer with Expertise in UI/UX and Front-End Development
           </h1>
           <p className="text-sm font-bold">
             Got a shop to launch or a website to develop? Let's work together to
-            create an awesome user experience! As a UI/UX expert and software
-            engineer, I'll collaborate with you to understand your needs and
-            bring your vision to life. Whether you're starting from scratch or
-            need help with an existing site, I'm here to help you create
-            something amazing.
+            create an awesome user experience! As a skilled software engineer,
+            I'll collaborate with you to understand your needs and bring your
+            vision to life. Whether you're starting from scratch or need help
+            with an existing site, I'm here to help you create something
+            amazing.
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-12 border-r-4 py-6 pb-12 max-w-[327px]">
+      <div className="flex flex-col gap-12 my-6">
         {skillsData.map((service) => (
           <SkillDetails
             key={service.title}
@@ -77,7 +76,7 @@ const Hero = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

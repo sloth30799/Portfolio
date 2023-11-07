@@ -3,22 +3,24 @@ import cardBg from "../assets/code-card.svg"
 
 const Service = ({ img, title, caption }) => {
   return (
-    <div className="relative">
+    <article className="relative mb-3 border-r-4">
       <img src={cardBg} alt="" className="z-0 shadow-card" />
-      <div className="absolute left-[280px] top-[80px] transform rotate-90 -translate-y-full font-title text-3xl">
+      <div className="absolute left-[90px] top-[260px] transform rotate-90 -translate-y-full font-title text-2xl leading-10 whitespace-nowrap">
         {"<>"}
-        <span className="absolute leading-10 whitespace-nowrap">{title}</span>
+        {title}
       </div>
-      <div className="absolute top-10 left-10 z-10 font-bold">
+      <div className="absolute z-10 font-body top-10 left-10">
         <p>///</p>
-        <h1 className="text-xs h-24 w-36 overflow-hidden">{caption}</h1>
+        <p className="h-24 overflow-hidden text-sm leading-none font-body w-36">
+          {caption}
+        </p>
       </div>
       <img
         src={img}
         alt=""
-        className="z-10 h-[380px] w-[260px] absolute inset-x-2 -bottom-7 rounded-lg grayscale hover:grayscale-0"
+        className="z-10 h-[380px] w-[220px] absolute inset-x-3 -bottom-8 rounded-lg grayscale hover:grayscale-[0.5]"
       />
-    </div>
+    </article>
   )
 }
 

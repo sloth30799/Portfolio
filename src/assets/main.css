@@ -7,25 +7,25 @@
       from 90deg at 1px 1px,
       #0000 90deg,
 
-      rgb(206, 206, 206) 0
+      rgb(218, 218, 218) 0
     )
     0 0/50px 50px;
 }
 
 .btn {
-  @apply rounded-lg py-0 normal-case;
+  @apply py-0 normal-case rounded-lg;
 }
 
 .btn-primary {
-  @apply hover:bg-white hover:text-black hover:shadow-black;
+  @apply hover:bg-white hover:text-black hover:shadow-black active:bg-white active:text-black active:shadow-black;
 }
 
 .btn-secondary {
-  @apply hover:bg-white hover:text-darkBlue hover:shadow-black;
+  @apply hover:bg-white hover:text-darkBlue hover:shadow-black active:bg-white active:text-darkBlue active:shadow-black;
 }
 
 .badge {
-  @apply rounded-full px-2 py-1 text-xs text-white;
+  @apply px-2 py-1 text-xs text-white rounded-full;
 }
 
 .workImg {

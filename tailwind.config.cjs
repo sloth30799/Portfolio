@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       title: "Sigmar",
+      body: "VT323",
     },
     backgroundImage: {
       wanderer: "url('./src/assets/wanderer.jpeg')",
@@ -26,8 +27,8 @@ module.exports = {
     },
     colors: {
       grey: "#444444",
-      black: "#000000",
-      white: "#FFFFFF",
+      black: "#111111",
+      white: "#F8F8F8",
       darkBlue: "#1d2445",
       deepPurple: "#311b92",
     },
