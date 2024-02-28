@@ -72,7 +72,7 @@ const Navbar = () => {
         </NavLink>
       </ul>
       {isOpen && (
-        <ul className="absolute left-0 top-0 z-10 m-auto w-full h-full bg-base-100 flex flex-col gap-3 justify-center items-center">
+        <ul className="fixed left-0 top-0 z-10 m-auto w-screen h-screen bg-base-100 flex flex-col gap-3 justify-center items-center">
           <li>
             <AiOutlineCloseCircle onClick={close} />
           </li>
