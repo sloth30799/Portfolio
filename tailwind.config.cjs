@@ -3,13 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,jsx}"],
   theme: {
     extend: {
-
       fontFamily: {
         title: "Sigmar",
         body: "VT323",
       },
       backgroundImage: {
-        skillCard: "url('./src/assets/svg/code-card.svg')",
+        skillCard: "url('@/assets/svg/code-card.svg')",
       },
       backgroundSize: {
         "40px": "40px 40px",
