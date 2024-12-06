@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom"
-import NotFoundImage from "../assets/404.svg"
+import NotFoundImage from "../assets/svg/404.svg"
 
 const NotFound = () => {
 	return (

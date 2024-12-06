@@ -1,0 +1,28 @@
+<svg width="250" height="450" viewBox="0 0 250 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_3)">
+<path d="M1 1H210V449H1V1Z" fill="white"/>
+<mask id="mask0_1_3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="211" height="451">
+<path d="M210.28 0H0V450.003H210.28V0Z" fill="white"/>
+<path d="M0.827866 0.896423H209.983V449.075H0.827866V0.896423Z" fill="black"/>
+</mask>
+<g mask="url(#mask0_1_3)">
+<path d="M0.827872 0.896421V0H0V0.896421H0.827872ZM0.827872 449.075H0V449.971H0.827872V449.075ZM0.827872 1.79284H209.983V0H0.827872V1.79284ZM209.983 448.178H0.827872V449.971H209.983V448.178ZM1.65574 449.075V0.896421H0V449.075H1.65574Z" fill="black"/>
+</g>
+<path d="M171 54.3236L209.511 1L249 55.6762L210.488 109L171 54.3236Z" fill="white"/>
+<path d="M209 1.71096L248.493 57L249 56.289L209.508 1L209 1.71096Z" fill="black"/>
+<path d="M195 56H248V449H195V56Z" fill="white"/>
+<mask id="mask1_1_3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="195" y="55" width="55" height="396">
+<path d="M249.343 55.119H195.531V450.44H249.343V55.119Z" fill="white"/>
+<path d="M195.531 55.119H248.423V449.104H195.531V55.119Z" fill="black"/>
+</mask>
+<g mask="url(#mask1_1_3)">
+<path d="M248.423 449.104V450H249.251V449.104H248.423ZM247.595 55.119V449.104H249.251V55.119H247.595ZM248.423 448.207H195.531V450H248.423V448.207Z" fill="black"/>
+</g>
+<path d="M195.117 449.104L194.352 0.893799" stroke="black"/>
+</g>
+<defs>
+<clipPath id="clip0_1_3">
+<rect width="250" height="450" fill="white"/>
+</clipPath>
+</defs>
+</svg>

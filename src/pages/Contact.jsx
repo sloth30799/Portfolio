@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import emailjs from "@emailjs/browser"
-import mailIcon from "../assets/mail-icon.svg"
+import mailIcon from "../assets/svg/mail-icon.svg"
 import { Spinner } from "../components/loading/Spinner"
 import Toast from "../components/Toast"
 
@@ -40,8 +40,8 @@ const Contact = () => {
 	}
 
 	return (
-		<section className="p-3">
-			<div className="container p-3 m-auto my-6 text-black bg-white border-2 border-black border-solid shadow-black">
+		<section className="p-4">
+			<div className="container p-4 m-auto my-6 text-black bg-white border-2 border-black border-solid shadow-black">
 				<div className="flex flex-col p-3 lg:flex-row lg:justify-between gap-9">
 					<h1 className={styles.title}>Contact</h1>
 					<div className="flex flex-col gap-6 lg:w-1/2 lg:flex-row">

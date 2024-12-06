@@ -2,28 +2,28 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx}"],
   theme: {
-    fontFamily: {
-      title: "Sigmar",
-      body: "VT323",
-    },
-    backgroundImage: {
-      wanderer: "url('./src/assets/wanderer.jpeg')",
-      "wanderer-store": "url('./src/assets/wanderer-store.jpeg')",
-      tackletalk: "url('./src/assets/tackletalk.jpeg')",
-      akino: "url('./src/assets/akino.jpeg')",
-    },
-    backgroundSize: {
-      "40px": "40px 40px",
-    },
-    dropShadow: {
-      "3xl": "10px 10px 0 rgba(0,0,0,0.72)",
-    },
+    extend: {
 
-    boxShadow: {
-      black: "10px 10px 0px 0px rgba(0,0,0,1)",
-      btn: "5px 5px 0px 0px rgba(0,0,0,1)",
-      blue: "10px 10px 0px 0px #1d2445",
-      card: "-10px 10px 0px 0px rgba(0,0,0,1)"
+      fontFamily: {
+        title: "Sigmar",
+        body: "VT323",
+      },
+      backgroundImage: {
+        skillCard: "url('./src/assets/svg/code-card.svg')",
+      },
+      backgroundSize: {
+        "40px": "40px 40px",
+      },
+      dropShadow: {
+        "3xl": "10px 10px 0 rgba(0,0,0,0.72)",
+      },
+  
+      boxShadow: {
+        black: "10px 10px 0px 0px rgba(0,0,0,1)",
+        btn: "5px 5px 0px 0px rgba(0,0,0,1)",
+        blue: "10px 10px 0px 0px #1d2445",
+        card: "-10px 10px 0px 0px rgba(0,0,0,1)"
+      },
     },
     colors: {
       grey: "#444444",

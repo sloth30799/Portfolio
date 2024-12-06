@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   SiExpress,
   SiMongodb,
@@ -9,25 +9,27 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiRedux,
-} from "react-icons/si"
-import SkillDetails from "./SkillDetails"
+} from "react-icons/si";
+import SkillDetails from "./SkillDetails";
+import p1 from "@/assets/img/p1.jpeg";
+import p2 from "@/assets/img/p2.jpeg";
 
 const styles = {
   icon: `rounded-lg hover:scale-150 hover:bg-white hover:text-black p-1 ease-in-out`,
-}
+};
 
 const skillsData = [
   {
-    img: "/img/p1.jpeg",
+    img: p1,
     title: "Frontend Development",
     caption: "Craft user interfaces and experiences that engage your audience.",
   },
   {
-    img: "/img/p2.jpeg",
+    img: p2,
     title: "Backend Development",
     caption: "Build robust server-side solutions to power your applications.",
   },
-]
+];
 
 const Hero = () => {
   return (
@@ -54,7 +56,7 @@ const Hero = () => {
         <div className="px-3 py-6 bg-white border-2 shadow-black">
           <span className="text-xs font-title">// The Dev</span>
           <h1 className="mb-6 text-xl font-title">
-            Software Engineer with Expertise in UI/UX and Front-End Development
+            Software Engineer with Expertise in Front-End Development
           </h1>
           <p className="text-sm font-bold">
             Got a shop to launch or a website to develop? Let's work together to
@@ -66,7 +68,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-12 my-6">
+      <div className="flex flex-col md:flex-row lg:flex-col gap-12 my-6 mb-9">
         {skillsData.map((service) => (
           <SkillDetails
             key={service.title}
@@ -77,7 +79,7 @@ const Hero = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

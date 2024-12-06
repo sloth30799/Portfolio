@@ -1,9 +1,9 @@
 import React from "react"
 import WorkDetail from "./WorkDetail"
-import wandererBg from "../../assets/wanderer.jpeg"
-import wandererStoreBg from "../../assets/wanderer-store.jpeg"
-import tackletalkBg from "../../assets/tackletalk.jpeg"
-import akinoBg from "../../assets/akino.jpeg"
+import wandererBg from "../../assets/img/wanderer.jpeg"
+import wandererStoreBg from "../../assets/img/wanderer-store.jpeg"
+import tackletalkBg from "../../assets/img/tackletalk.jpeg"
+import akinoBg from "../../assets/img/akino.jpeg"
 
 const projects = [
   {
