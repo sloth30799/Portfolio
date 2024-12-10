@@ -43,13 +43,13 @@ const Footer = () => {
         >
           Email
         </a>
-        <a
+        {/* <a
           className="link link-hover font-semibold text-xs"
           href="https://twitter.com/hanyehtun"
           target="_blank"
         >
           Twitter
-        </a>
+        </a> */}
         <a
           className="link link-hover font-semibold text-xs"
           href="https://linkedin.com/in/hanyehtun30799"
