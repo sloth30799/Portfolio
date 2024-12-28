@@ -1,9 +1,9 @@
-import React from "react"
-import WorkDetail from "./WorkDetail"
-import wandererBg from "../../assets/img/wanderer.jpeg"
-import wandererStoreBg from "../../assets/img/wanderer-store.jpeg"
-import tackletalkBg from "../../assets/img/tackletalk.jpeg"
-import akinoBg from "../../assets/img/akino.jpeg"
+import React from "react";
+import WorkDetail from "./WorkDetail";
+import wandererBg from "../../assets/img/wanderer.jpeg";
+import wandererStoreBg from "../../assets/img/wanderer-store.jpeg";
+import tackletalkBg from "../../assets/img/tackletalk.jpeg";
+import akinoBg from "../../assets/img/akino-ramen.png";
 
 const projects = [
   {
@@ -25,6 +25,15 @@ const projects = [
     badge: "E-commerce",
   },
   {
+    link: "https://akino-ramen.vercel.app/",
+    glink: "https://github.com/sloth30799/Akino",
+    img: akinoBg,
+    title: "Akino Restaurant",
+    caption:
+      "Dive into the rich, authentic flavors of Japan - a beautifully designed website that showcases the best of Japanese ramen. Come and experience the flavors of Akino today!",
+    badge: "Design",
+  },
+  {
     link: "https://tackletalk.onrender.com/",
     glink: "https://github.com/sloth30799/TackleTalk",
     img: tackletalkBg,
@@ -33,16 +42,7 @@ const projects = [
       "Join the football fandom with TackleTalk - a social app that lets you connect with fellow fans, share your passion and join communities and met people with similar interests.",
     badge: "Social App",
   },
-  {
-    link: "https://akino.netlify.app/",
-    glink: "",
-    img: akinoBg,
-    title: "Akino Restaurant",
-    caption:
-      "Satisfy your taste buds with Akino Restaurant - a beautifully designed website that showcases the best of Japanese cuisine. Come and experience the flavors of Akino today!",
-    badge: "Design",
-  },
-]
+];
 
 const Works = () => {
   return (
@@ -62,7 +62,7 @@ const Works = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;
