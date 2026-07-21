@@ -1,30 +1,17 @@
-import { NavLink } from "react-router-dom"
-import NotFoundImage from "../assets/svg/404.svg"
+import { Link } from "react-router-dom"
+import { notFound } from "../data/portfolio"
 
-const NotFound = () => {
-	return (
-		<main className="flex flex-col items-center justify-center w-screen h-screen px-3 space-y-6">
-			<img
-				src={NotFoundImage}
-				className="max-w-[400px] w-[50%] min-w-[200px]"
-				alt=""
-			/>
-
-			<div className="space-y-3 text-center">
-				<h4 className="text-2xl font-medium font-title">
-					Something's Missing!
-				</h4>
-				<p className="text-sm font-body">
-					You're seeing this page because the URL you entered doesn't
-					exists. Yet.
-				</p>
-			</div>
-
-			<NavLink to="/">
-				<button className="btn btn-primary">Back TO home</button>
-			</NavLink>
-		</main>
-	)
+export default function NotFound() {
+  return (
+    <article className="page page-not-found">
+      <p className="eyebrow">{notFound.eyebrow}</p>
+      <p className="not-found-number" aria-hidden="true">404</p>
+      <h1>{notFound.heading}</h1>
+      <p>{notFound.body}</p>
+      <div className="action-row">
+        <Link className="action-primary" to={notFound.homeAction.href}>{notFound.homeAction.label}</Link>
+        <Link to={notFound.projectsAction.href}>{notFound.projectsAction.label}</Link>
+      </div>
+    </article>
+  )
 }
-
-export default NotFound

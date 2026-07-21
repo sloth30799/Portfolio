@@ -1,53 +1,26 @@
-import React from "react"
 import { Link } from "react-router-dom"
-import { BiArrowFromLeft } from "react-icons/bi"
-import aboutImg from "@/assets/img/about.webp"
+import { about, actions } from "../data/portfolio"
 
-const styles = {
-  container: `container m-auto flex flex-col gap-6 lg:flex-row bg-white p-3 lg:p-6 my-6 border-solid border-black border-2 shadow-black`,
-  image: `rounded-sm  block w-full lg:w-1/2 grayscale hover:grayscale-[0.25] border`,
-  textBox: `w-full p-3 lg:w-1/2 lg:p-0`,
-}
-
-const About = () => {
+export default function About() {
   return (
-    <div className="p-4">
-      <div className={styles.container}>
-        <img
-          src={aboutImg}
-          alt="Illustration by Semenin Egor from Ouch!"
-          className={styles.image}
-        />
-
-        <div className={styles.textBox}>
-          <h1 className="font-title">//About</h1>
-          <h2 className="text-3xl font-title">Han Ye Htun</h2>
-          <span className="block mb-6 text-xs tracking-wide text-accent">
-            Software Engineer
-          </span>
-          <p className="mb-3 text-sm font-bold">
-            Hi there! My name is Han Ye Htun, and I am a driven and passionate
-            software engineer, always on the lookout for new challenges and
-            opportunities to learn and grow in my field. With my background in
-            medicine, I have strong foundation in problem-solving and critical
-            thinking skills. <br />
-            <br />I am committed to using my skills and knowledge to create
-            innovative solutions that make a positive impact on people's lives.
-            If you have a project that aligns with my passions and skills, I
-            would love to connect and see how we can work together to make a
-            difference.
-          </p>
-          
-          <Link to="/contact" className="flex justify-end mt-6">
-            <button className="gap-2 btn btn-primary">
-              Contact
-              <BiArrowFromLeft size={"1.3rem"} />
-            </button>
-          </Link>
+    <article className="page page-about">
+      <p className="eyebrow">{about.eyebrow}</p>
+      <h1>{about.heading}</h1>
+      <div className="about-layout">
+        <div className="about-copy">
+          {about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
+        <aside className="principles" aria-label="Working principles">
+          <p className="section-number">Working notes</p>
+          <ol>
+            {about.principles.map((principle, index) => <li key={principle}><span>{String(index + 1).padStart(2, "0")}</span>{principle}</li>)}
+          </ol>
+        </aside>
       </div>
-    </div>
+      <div className="action-row">
+        <Link to={actions.projects.href}>View projects</Link>
+        <Link className="action-primary" to={actions.conversation.href}>Start a conversation</Link>
+      </div>
+    </article>
   )
 }
-
-export default About

@@ -1,38 +1,25 @@
-import {
-	createBrowserRouter,
-	createRoutesFromElements,
-	Route,
-	RouterProvider,
-} from "react-router-dom"
-import Preloader from "./components/loading/Preloader"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Layout from "./components/Layout"
-import Homepage from "./pages/Homepage"
 import About from "./pages/About"
+import ChromaticCaseStudy from "./pages/ChromaticCaseStudy"
 import Contact from "./pages/Contact"
+import Homepage from "./pages/Homepage"
 import NotFound from "./pages/NotFound"
-import { AnimatePresence } from "framer-motion"
 
 function App() {
-	const router = createBrowserRouter(
-		createRoutesFromElements(
-			<>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<Homepage />} />
-					<Route path="about" element={<About />} />
-					<Route path="contact" element={<Contact />} />
-				</Route>
-				<Route path="*" element={<NotFound />} />
-			</>
-		)
-	)
-
-	return (
-		<Preloader backgroundColor="bg-black" color="#fff" size={80}>
-			<AnimatePresence mode="wait" initial={false}>
-				<RouterProvider router={router} />
-			</AnimatePresence>
-		</Preloader>
-	)
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/work/chromatic-affinities" element={<ChromaticCaseStudy />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App

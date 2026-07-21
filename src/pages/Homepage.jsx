@@ -1,16 +1,17 @@
-import React from "react"
+import Capabilities from "../components/homepage/Capabilities"
+import FeaturedWork from "../components/homepage/FeaturedWork"
 import Hero from "../components/homepage/Hero"
-import Cta from "../components/homepage/Cta"
-import Works from "../components/homepage/Works"
+import ProjectIndex from "../components/homepage/ProjectIndex"
 
-const Homepage = () => {
+export default function Homepage() {
   return (
     <>
       <Hero />
-      <Works />
-      <Cta />
+      <FeaturedWork />
+      <div data-testid="source-supporting">
+        <ProjectIndex />
+        <Capabilities />
+      </div>
     </>
   )
 }
-
-export default Homepage

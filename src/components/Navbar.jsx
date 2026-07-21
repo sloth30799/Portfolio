@@ -1,113 +1,104 @@
-import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
-import { BsLinkedin, BsGithub, BsMenuButtonFill } from "react-icons/bs"
-import { AiOutlineCloseCircle } from "react-icons/ai"
+import { useEffect, useRef, useState } from "react"
+import { Link, NavLink, useLocation } from "react-router-dom"
+import { navigation } from "../data/portfolio"
 
-const styles = {
-  navbar: `p-6 py-3 flex justify-between`,
-  logoBox: `w-full flex gap-3 items-center p-3 lg:p-0`,
-  logo: `font-extrabold tracking-tight underline text-lg md:text-xl`,
-  icon: `hover:text-white hover:bg-darkBlue hover:shadow-btn`,
-  list: `hidden lg:flex m-1 px-1 gap-3 border-b lg:gap-6`,
-  active: `text-lg font-title bg-black text-white px-2 rounded text-sm`,
-  inactive: `text-lg px-2 font-title hover:bg-accent rounded hover:text-white active:bg-grey text-sm`,
-  divider: `hidden border-r h-3 place-self-end lg:block`,
+const mobileBreakpoint = 1024
+
+function navClass({ isActive }) {
+  return isActive ? "nav-link is-current" : "nav-link"
 }
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+export default function Navbar() {
+  const location = useLocation()
+  const [open, setOpen] = useState(false)
+  const triggerRef = useRef(null)
+  const closeRef = useRef(null)
+  const dialogRef = useRef(null)
+  const restoreFocus = useRef(true)
 
-  function open() {
-    setIsOpen(true)
+  const closeMenu = (shouldRestore = true) => {
+    restoreFocus.current = shouldRestore
+    setOpen(false)
   }
 
-  function close() {
-    setIsOpen(false)
+  useEffect(() => {
+    if (!open) return undefined
+    const main = document.getElementById("main-content")
+    const footer = document.querySelector("footer")
+    main?.setAttribute("inert", "")
+    footer?.setAttribute("inert", "")
+    document.body.style.overflow = "hidden"
+    closeRef.current?.focus()
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault()
+        closeMenu(true)
+      }
+      if (event.key === "Tab") {
+        const controls = [...(dialogRef.current?.querySelectorAll('a[href], button:not([disabled])') ?? [])]
+        if (!controls.length) return
+        const first = controls[0]
+        const last = controls[controls.length - 1]
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault()
+          last.focus()
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault()
+          first.focus()
+        }
+      }
+    }
+    document.addEventListener("keydown", onKeyDown)
+    return () => {
+      document.removeEventListener("keydown", onKeyDown)
+      main?.removeAttribute("inert")
+      footer?.removeAttribute("inert")
+      document.body.style.overflow = ""
+      if (restoreFocus.current) triggerRef.current?.focus()
+    }
+  }, [open])
+
+  useEffect(() => {
+    if (open) closeMenu(false)
+  }, [location.pathname, location.search, location.hash])
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= mobileBreakpoint && open) closeMenu(true)
+    }
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [open])
+
+  function activateLink() {
+    closeMenu(false)
   }
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logoBox}>
-        <Link to="/">
-          <h2 className={styles.logo}>#HanYeHtun</h2>
-        </Link>
-        <a href="https://linkedin.com/in/hanyehtun30799" target="_blank">
-          <BsLinkedin size={"1.5rem"} className={styles.icon} />
-        </a>
-        <a href="https://github.com/sloth30799" target="_blank">
-          <BsGithub size={"1.5rem"} className={styles.icon} />
-        </a>
-        <BsMenuButtonFill
-          size={"1.5rem"}
-          onClick={open}
-          className="lg:hidden block ml-auto"
-        />
+    <nav className="site-nav" aria-label="Primary navigation">
+      <Link className="wordmark" to="/" aria-label="Han Ye Htun home">Han Ye Htun<span aria-hidden="true"> / HYH</span></Link>
+      <div className="desktop-nav" aria-hidden={open || undefined} inert={open ? "" : undefined}>
+        {navigation.map((item) => <NavLink className={navClass} key={item.href} to={item.href}>{item.label}</NavLink>)}
       </div>
-      <ul className={styles.list}>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? styles.active : styles.inactive
-          }
-        >
-          Home
-        </NavLink>
-        <li className={styles.divider}></li>
-        <NavLink
-          to="about"
-          className={({ isActive }) =>
-            isActive ? styles.active : styles.inactive
-          }
-        >
-          About
-        </NavLink>
-        <li className={styles.divider}></li>
-        <NavLink
-          to="contact"
-          className={({ isActive }) =>
-            isActive ? styles.active : styles.inactive
-          }
-        >
-          Contact
-        </NavLink>
-      </ul>
-
-      {isOpen && (
-        <ul className="fixed left-0 top-0 z-10 m-auto w-screen h-screen bg-base-100 flex flex-col gap-3 justify-center items-center">
-          <li>
-            <AiOutlineCloseCircle onClick={close} />
-          </li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? styles.active : styles.inactive
-            }
-            onClick={close}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="about"
-            className={({ isActive }) =>
-              isActive ? styles.active : styles.inactive
-            }
-            onClick={close}
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="contact"
-            className={({ isActive }) =>
-              isActive ? styles.active : styles.inactive
-            }
-            onClick={close}
-          >
-            Contact
-          </NavLink>
-        </ul>
+      <button
+        ref={triggerRef}
+        className="menu-trigger"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded={open}
+        aria-controls="mobile-navigation"
+        onClick={() => { restoreFocus.current = true; setOpen(true) }}
+      >
+        Menu
+      </button>
+      {open && (
+        <div ref={dialogRef} id="mobile-navigation" className="mobile-dialog" role="dialog" aria-modal="true" aria-label="Site navigation">
+          <div className="mobile-dialog__inner">
+            {navigation.map((item) => <NavLink className={navClass} key={item.href} to={item.href} onClick={activateLink}>{item.label}</NavLink>)}
+            <button ref={closeRef} className="menu-close" type="button" aria-label="Close menu" onClick={() => closeMenu(true)}>Close menu</button>
+          </div>
+        </div>
       )}
     </nav>
   )
 }
-
-export default Navbar
